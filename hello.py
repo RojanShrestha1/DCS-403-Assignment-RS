@@ -1,1 +1,1 @@
-print("hello im jenkins runnning automatically")
+print("hello im jenkins runnning automatically and say hello")
