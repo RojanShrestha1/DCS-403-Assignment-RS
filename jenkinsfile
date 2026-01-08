@@ -2,25 +2,21 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/RojanShrestha1/DCS-403-Assignment-RS.git'
-            }
-        }
         stage('Build') {
             steps {
-                sh 'echo "Building the project...."'
-                sh 'ls -la'
+                echo 'No build needed for Python'
             }
         }
+
         stage('Test') {
             steps {
-               sh 'python3 -m py_compile hello.py'
+                sh 'python3 -m py_compile hello.py'
             }
         }
-        stage('Deploy') {
+
+        stage('Run') {
             steps {
-                sh 'echo "Deploy step (simulated)"'
+                sh 'python3 hello.py'
             }
         }
     }
